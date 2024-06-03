@@ -1,0 +1,33 @@
+{
+  "comments": {
+    "commentLine": "#",
+    "lineComment": "//",
+    "blockComment": ["من", "نهاية"]
+  },
+  "folding": {
+    "markers": {
+      "start": "بينما",
+      "end": "نهاية"
+    },
+    "strategy": "indentation"
+  },
+  "indentation": 2,
+  "brackets": [
+    ["بينما", "نهاية"],
+    ["اذا", "نهاية"],
+    ["أما_اذا", "نهاية"],
+    ["نفذ", "توقف"]
+  ],
+  "autoClosingPairs": [
+    { "open": "بينما", "close": "نهاية" },
+    { "open": "اذا", "close": "نهاية" },
+    { "open": "أما_اذا", "close": "نهاية" },
+    { "open": "نفذ", "close": "توقف" }
+  ],
+  "surroundingPairs": [
+    ["بينما", "نهاية"],
+    ["اذا", "نهاية"],
+    ["أما_اذا", "نهاية"],
+    ["نفذ", "توقف"]
+  ]
+}

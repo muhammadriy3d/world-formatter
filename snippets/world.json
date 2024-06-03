@@ -1,0 +1,68 @@
+{
+  "print": {
+    "prefix": "print",
+    "body": ["\tطباعة(\"${1:message}\");", "\t$0"],
+    "description": "print statement"
+  },
+  "while": {
+    "prefix": "while",
+    "body": ["\tبينما ${1:condition} نفذ {", "\t\t$0", "\t}"],
+    "description": "while loop"
+  },
+  "if": {
+    "prefix": "if",
+    "body": ["\tاذا ${1:condition} نفذ {", "\t\t$0", "\t}"],
+    "description": "if statement"
+  },
+  "else": {
+    "prefix": "else",
+    "body": ["\tوالا {", "\t\t$0", "\t}"],
+    "description": "else statement"
+  },
+  "elseif": {
+    "prefix": "elseif",
+    "body": ["\tأما_اذا ${1:condition} نفذ {", "\t\t$0", "\t}"],
+    "description": "elseif statement"
+  },
+  "for": {
+    "prefix": "for",
+    "body": ["\tمن ${1:start} الي ${2:end} نفذ {", "\t\t$0", "\t}"],
+    "description": "for loop"
+  },
+  "foreach": {
+    "prefix": "foreach",
+    "body": ["\tمن ${1:list} نفذ {", "\t\t$0", "\t}"],
+    "description": "foreach loop"
+  },
+  "function": {
+    "prefix": "function",
+    "body": [
+      "دالة ${1:name}(${2:params}) {",
+      "\t\t# متغيرات و ثوابت",
+      "\t\tمتغير العتبة = 0.000001 ",
+      "\t\tمتغير عدد_أقصي = 100",
+      "\t\tمتغير اقل_ = 0.0",
+      "\t\tمتغير أكبر_ = 1.0",
+      "\t\tمتغير وسط_ = (اقل_ + أكبر_)/2",
+      "\t\t",
+      "\t\tمن ا = 0 الي عدد_أقصي نفذ {",
+      "\t\t\tمتغير القيمة = قاعدة ^ وسط_",
+      "\t\t\t",
+      "\t\t\tاذا قيمة_مطلقة(القيمة) <= العتبة  نفذ ارجاع وسط_",
+      "\t\t\t",
+      "\t\t\tاذا القيمة > رقم نفذ {",
+      "\t\t\t\tمتغير أكبر_ = وسط_",
+      "\t\t\t} والا {",
+      "\t\t\t\tمتغير اقل_ = وسط_",
+      "\t\t\t}",
+      "\t\t\t",
+      "\t\t\tمتغير وسط_ = (اقل_ + أكبر_)/2",
+      "\t\t}",
+      "\t\t",
+      "\t\tارجاع وسط_",
+      "\t}",
+      "نهاية"
+    ],
+    "description": "function declaration"
+  }
+}
